@@ -1,0 +1,776 @@
+@keyframes rotation {
+  from {
+    opacity: .6;
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: .9;
+  }
+  to {
+    opacity: .6;
+    transform: rotate(359deg);
+  }
+}
+
+.page-template-show-template h1.lc-show-header:before,
+.page-template-show-template h2:before {
+  content: none;
+}
+
+.feather-svg {
+  fill: none;
+}
+
+input[type="text"].form-control {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.input-group>.input-group-append>.btn {
+  border-radius: 50px;
+}
+.page-link:hover {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.page-item:first-child a.page-link,
+.page-item:first-child span.page-link {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.page-item:last-child a.page-link,
+.page-item:last-child span.page-link {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.lc-site-content {
+  padding-top: 10px !important;
+}
+
+.lc-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lc-show-logo-bg {
+  margin-top: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 28%;
+  padding-top: 28%;
+  border-radius: 100%;
+  box-sizing: content-box;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.lc-show-logo-bg:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 12px;
+  border-color: inherit;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 200px;
+}
+
+.lc-show-logo-bg img {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lc-show-header-bg {
+  padding-left: 45px;
+  padding-right: 45px;
+  margin-bottom: 30px;
+  border-radius: 100px;
+}
+
+.lc-show-header-bg h1 {
+  text-align: center;
+}
+
+.lc-show-tagline-bg {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 100px;
+}
+
+.lc-show-tagline-bg p {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* 
+VIDEO GRID STARTS HERE 
+It seems unecessary to specifically load this style for the NetflixGrid.
+*/
+.lc-video-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.lc-video-holder {
+  height: 0%;
+}
+
+.lc-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.lc-background svg {
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.lc-background .lc-gradient {
+  background: linear-gradient(0deg, rgba(0,1,22,1) 0%, rgba(0,1,4,0.12788865546218486) 25%);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+
+.lc-video-holder:hover .lc-background .lc-gradient,
+.lc-video-holder.active .lc-background .lc-gradient {
+  display: block;
+}
+
+.lc-background .lc-color-overlay {
+  display: none;
+}
+
+.lc-video-holder:hover .lc-color-overlay {
+  display: block;
+}
+
+.lc-video-holder.active .lc-color-overlay {
+  display: block;
+}
+
+.lc-video-holder .lc-background .lc-title-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.lc-video-holder .lc-background .lc-title-wrapper .lc-title-positioner {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 200%;
+  height: 100%;
+  display: inline-block;
+}
+
+.lc-video-holder .lc-background .lc-title-wrapper .lc-title-positioner h4 {
+  opacity: 1;
+  margin-top: 0px;
+  background: #212025;
+  display: inline-block;
+  border-radius: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -100%);
+  max-width: 44%;
+  -webkit-transition: all 0.3s; /* Safari prior 6.1 */
+  transition: all 0.3s;
+
+}
+
+.lc-video-holder:hover .lc-background .lc-title-wrapper .lc-title-positioner h4 {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lc-video-holder.active .lc-background .lc-title-wrapper .lc-title-positioner h4 {
+  opacity: 0;
+}
+
+.lc-arrow-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  z-index: 10;
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.lc-video-holder.active .lc-background .lc-arrow-wrapper {
+  opacity: 1;
+  height: 20px;
+}
+
+.lc-video-holder .lc-arrow {
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top-width: 20px;
+  border-top-style: solid;
+  transform: translateY(-100%);
+}
+
+.lc-video-holder.active .lc-arrow {
+  transform: translateY(0%);
+  -webkit-transition: transform 0.2s; /* Safari prior 6.1 */
+  transition: transform 0.2s;
+}
+
+.lc-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.lc-video-holder {
+  background-color: #47444e;
+}
+
+.lc-video-holder #pause {
+  display: none;
+}
+
+.lc-video-holder.playing #play {
+  display: none;
+}
+
+.lc-video-holder.playing #pause {
+  display: block;
+}
+
+.lc-profiles {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+
+.lc-profile {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 15px;
+}
+
+.lc-img-frame {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 100px;
+  overflow: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lc-team-align-center > div:first-child {
+  order: 2;
+}
+
+.lc-team-align-center .lc-profiles {
+  justify-content: left;
+}
+
+.lc-team-align-center .lc-profile {
+  max-width: 20%;
+  min-width: 20%;
+}
+
+@media (max-width: 991px) {
+  .lc-team-align-center .lc-profile {
+    max-width: 25%;
+    min-width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  .lc-team-align-center .lc-profile {
+    max-width: 33.3333%;
+    min-width: 33.3333%;
+  }
+}
+
+
+.lc-video-holder.active .lc-overlay {
+  opacity: 1;
+}
+
+/* New CSS starts from here */
+
+.lc-expander-probe {
+  width: 0px;
+  padding-bottom: 0px;
+}
+
+.lc-expander-probe .lc-content-holder {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #212025;
+    color: azure;
+    display: none;
+
+}
+
+.lc-expander-probe .lc-content-holder:after {
+  display: block;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 35px;
+  opacity: 0.5;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0,1,22,1) 0%, rgba(0,1,4,0) 100%);
+}
+
+.lc-video-holder.active + .lc-expander-probe .lc-content-holder {
+  display: block;
+  z-index: 2;
+}
+
+
+.lc-movable-video-content {
+  position: relative;
+  height: 100%;
+  display: none;
+}
+.lc-content-holder .lc-movable-video-content {
+  display: flex;
+}
+
+.lc-movable-video-content .lc-video-wrapper {
+  height: 100%;
+  position: relative;
+  background: radial-gradient(circle, rgba(90, 90, 90, 0.2) 0%, rgb(41, 41, 41) 100%);
+}
+
+.lc-movable-video-content .lc-video-wrapper video {
+  min-height: 100%;
+  max-height: 100%;
+  width: auto;
+  position: relative;
+  max-width: unset;
+  transition: opacity 0.5s;
+}
+
+
+/* Not sure if it is a good idea to have separate opacity values for
+ * each element. TODO: improve;
+ */
+.lc-movable-video-content .lc-video-wrapper video,
+.lc-movable-video-content .lc-video-wrapper .lc-video-controls {
+  opacity: 1;
+}
+
+.lc-loader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.lc-loader svg {
+  animation: rotation 2.5s infinite linear;
+}
+
+.lc-loader div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lc-movable-video-content .lc-video-wrapper .lc-pause {
+  display: none;
+}
+
+.lc-movable-video-content .lc-video-wrapper[data-playing="true"] .lc-pause { 
+  display: block;
+}
+
+.lc-movable-video-content .lc-video-wrapper[data-playing="true"] .lc-play {
+  display: none;
+}
+
+.lc-video-controls {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  color: white;
+  transition: opacity 0.3s;
+}
+.lc-video-controls .lc-center-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.lc-video-controls .lc-center-controls > * {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none; 
+}
+
+
+.lc-video-controls .lc-center-controls > div {
+  padding: 30px;
+  border-radius: 100px;
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  position: relative;
+}
+
+.lc-video-controls .lc-center-controls svg {
+  display: block;
+}
+
+.lc-video-controls .lc-center-controls .lc-jump-back:after,
+.lc-video-controls .lc-center-controls .lc-jump-fwd:after {
+  display: block;
+  content: '5s';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: arial;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  line-height: 1;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.lc-video-controls .lc-center-controls .lc-jump-back:after {
+  padding-left: 6px;
+}
+.lc-video-controls .lc-center-controls .lc-jump-fwd:after {
+  padding-right: 2px;
+}
+
+.lc-video-controls .lc-center-controls .lc-fullscreen:after,
+.lc-video-controls .lc-center-controls .lc-fullscreen:before {
+  content: ' ';
+}
+
+.lc-video-controls .progress {
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.lc-video-controls .progress-bar {
+  pointer-events: none;
+  transition: unset;
+}
+
+.lc-movable-video-content .lc-video-wrapper[data-playing="true"] .lc-video-controls {
+  opacity: 0;
+}
+
+.lc-movable-video-content .lc-video-wrapper:hover .lc-video-controls {
+  opacity: 1;
+}
+
+.lc-content-holder.loading .lc-movable-video-content .lc-video-wrapper video,
+.lc-video-controls {
+  opacity: 0;
+}
+
+.lc-content-holder.loading .lc-movable-video-content .lc-video-wrapper .lc-loader {
+  display: block;
+}
+
+.lc-video-grid-paginator {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.lc-movable-video-content .lc-text-wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-grow: 2;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.lc-movable-video-content .lc-text-wrapper .lc-close-btn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  border-radius: 40px;
+  padding: 8px;
+  opacity: 1;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.lc-movable-video-content .lc-text-wrapper .lc-close-btn svg {
+  position: relative;
+  z-index: 2;
+}
+
+.lc-movable-video-content .lc-text-wrapper .lc-close-btn:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.hide-close-btn .lc-movable-video-content .lc-text-wrapper .lc-close-btn {
+  opacity: 0;
+}
+
+.lc-movable-video-content .lc-text-wrapper .lc-chat:nth-of-type(even) {
+  font-weight: bold;
+}
+
+.lc-movable-video-content .lc-text-wrapper .lc-music.artist:before {
+  content: '';
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  background-size: 65% 65%;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+  background-image: url('../assets/icons/music.svg');
+}
+.lc-movable-video-content .lc-text-wrapper .lc-music.artist {
+  margin-bottom: 0px;
+}
+
+.lc-movable-video-content .lc-text-wrapper .lc-music.title {
+  font-style: italic;
+} 
+
+.lc-movable-video-content .lc-text-wrapper .lc-music.title,
+.lc-movable-video-content .lc-text-wrapper .lc-music.text {
+  padding-left: 28px;
+}
+/*******************************************
+  Grid view content mobile optimisation
+ ******************************************/
+
+.lc-video-holder,
+.lc-expander-probe {
+  padding-top: 50%;
+}
+
+@media (max-width: 1199px) {
+
+  /* Note the overriding logic change on full width video display
+   */
+
+  .lc-video-holder.active[data-aspect-ratio="horisontal"] + .lc-expander-probe .lc-movable-video-content {
+    flex-direction: column;
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="horisontal"] + .lc-expander-probe {
+    padding-bottom: 102.5vw; /* Sum of .lc-video-wrapperand .lc-text-wrapper */
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="horisontal"] + .lc-expander-probe .lc-video-wrapper {
+    min-height: 56.25vw;
+    max-height: 56.25vw;
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="horisontal"] + .lc-expander-probe .lc-text-wrapper {
+    max-height: 46.25vw;
+    min-height: 46.25vw;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .lc-video-holder.active[data-aspect-ratio="square"] + .lc-expander-probe .lc-movable-video-content {
+    flex-direction: column;
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="square"] + .lc-expander-probe {
+    padding-bottom: 166.25vw; /* Sum of .lc-video-wrapperand .lc-text-wrapper */
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="square"] + .lc-expander-probe .lc-video-wrapper {
+    max-height: 100vw;
+    min-height: 100vw;
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="square"] + .lc-expander-probe .lc-text-wrapper {
+    max-height: 66.25vw;
+    min-height: 66.25vw;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .lc-video-holder.active[data-aspect-ratio="portrait"] + .lc-expander-probe .lc-movable-video-content {
+    flex-direction: column;
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="portrait"] + .lc-expander-probe {
+    padding-bottom: 244.0625vw; /* Sum of .lc-video-wrapperand .lc-text-wrapper */
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="portrait"] + .lc-expander-probe .lc-video-wrapper {
+    max-height: 177.8125vw;
+    min-height: 177.8125vw;
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="portrait"] + .lc-expander-probe .lc-text-wrapper {
+    max-height: 66.25vw;
+    min-height: 66.25vw;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Calculating 50% width for the wrapper based on assumption video is 569 x 320
+   */
+  .lc-video-holder.active[data-aspect-ratio="portrait"] + .lc-expander-probe {
+    padding-bottom: 88.90625vw
+  }
+  .lc-video-holder.active[data-aspect-ratio="portrait"] + .lc-expander-probe .lc-content-holder {
+    height: 88.90625vw
+  }
+}
+
+@media (min-width: 992px) {
+  .lc-video-holder,
+  .lc-expander-probe {
+    padding-top: 33.3333%;
+  }
+  .lc-video-holder.active + .lc-expander-probe {
+    padding-bottom: 650px;
+  }
+  .lc-expander-probe .lc-content-holder {
+      height: 650px; /* Match to probe value */
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="square"] + .lc-expander-probe {
+    padding-bottom: 48vw;  
+  }
+  .lc-video-holder.active[data-aspect-ratio="square"] + .lc-expander-probe .lc-content-holder {
+    height: 48vw;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .lc-video-holder,
+  .lc-expander-probe {
+    padding-top: 25%; /* Match in media queries to the grid element sizes */
+  }
+  .lc-video-holder.active + .lc-expander-probe {
+    padding-bottom: 33.5vw;
+  }
+
+  .lc-expander-probe .lc-content-holder {
+    height: 33.5vw; /* Match to probe value */
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="square"] + .lc-expander-probe {
+    padding-bottom: 42vw;
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="square"] + .lc-expander-probe .lc-content-holder {
+    height: 42vw;
+  }
+
+  .lc-video-holder.active[data-aspect-ratio="portrait"] + .lc-expander-probe {
+    padding-bottom: 100vh;  
+  }
+  .lc-video-holder.active[data-aspect-ratio="portrait"] + .lc-expander-probe .lc-content-holder {
+    height: 100vh;
+  }
+}
+
+/* Controls */
+
+@media (min-width: 767px) and ( max-width: 991px) {
+  [data-aspect-ratio="portrait"] + .lc-expander-probe .lc-video-controls .lc-play,
+  [data-aspect-ratio="portrait"] + .lc-expander-probe .lc-video-controls .lc-pause {
+    order: 0;
+  }
+  [data-aspect-ratio="portrait"] + .lc-expander-probe .lc-video-controls .lc-jump-back {
+    order: 3;
+  }
+
+  [data-aspect-ratio="portrait"] + .lc-expander-probe .lc-video-controls .lc-jump-fwd {
+    order: 4;
+  }
+
+  [data-aspect-ratio="portrait"] + .lc-expander-probe .lc-video-controls .lc-fullscreen {
+    order: 1;
+  }
+  [data-aspect-ratio="portrait"] + .lc-expander-probe .lc-video-controls .break {
+    order: 2;
+    width: 100%;
+  }
+}

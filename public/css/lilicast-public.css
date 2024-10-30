@@ -1,0 +1,235 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ .lc-sc-list-container {
+ 	overflow: hidden;
+ }
+
+ .lc-sc-distributor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* justify-content: space-evenly; */
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+ }
+
+.lc-sc-video-thumb-wrapper,
+.lc-sc-video-grid-placeholder {
+    margin-bottom: 10px;
+	flex-basis: 33.33%;
+    min-width: 280px;
+    flex-grow: 1;
+    margin: 0px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    box-sizing: border-box;
+}
+
+.lc-sc-video-thumb-wrapper a {
+    display: inline-block;
+    clear: both;
+}
+
+.lc-sc-video-thumb-wrapper .lc-sc-grid-timestamp,
+.lc-sc-video-thumb-wrapper .lc-sc-grid-length {
+ 	margin-top: 0;
+ 	color: gray;
+ 	display: inline-block;
+ 	font-style: italic;
+ }
+
+ .lc-sc-video-thumb-wrapper .lc-sc-grid-timestamp {
+    float: left;
+ }
+
+ .lc-sc-video-thumb-wrapper .lc-sc-grid-length {
+    float: right;
+    margin-right: 5px;
+ }
+
+.lc-sc-video-thumb-wrapper .lc-sc-grid-title {
+    clear: both;
+	margin-bottom: 0px;
+}
+
+.lc-sc-aspect-ratio {
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.lc-sc-aspect-ratio .lc-sc-overlay {
+    cursor: pointer;
+}
+
+.lc-sc-aspect-ratio .lc-sc-overlay .lc-sc-icon-play {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 38px;
+    border-radius: 100%;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.lc-sc-aspect-ratio .lc-sc-overlay:hover .lc-sc-icon-play {
+    opacity: 1;
+}
+
+.lc-sc-aspect-ratio .lc-sc-overlay .lc-sc-icon-play svg {
+    transform: translateX(10px);
+}
+
+.lc-sc-aspect-ratio .lc-sc-overlay,
+.lc-sc-aspect-ratio video,
+.lc-sc-aspect-ratio img,
+.lc-sc-aspect-ratio > svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lc-sc-aspect-ratio .lc-sc-overlay,
+.lc-sc-aspect-ratio > svg {
+    width: 100%;
+    height: 100%;
+}
+
+.lc-sc-aspect-ratio video,
+.lc-sc-aspect-ratio img {
+    width: 100%;
+    height: auto;
+}
+
+.lc-sc-aspect-ratio.portrait video,
+.lc-sc-aspect-ratio.portrait img {
+    height: 100%;
+    width: auto;
+}
+
+.lc-sc-aspect-ratio .lc-center-controls .lc-action {
+    padding: 18px;
+}
+
+.lc-sc-aspect-ratio .lc-video-controls .lc-center-controls .lc-jump-back:after,
+.lc-sc-aspect-ratio .lc-video-controls .lc-center-controls .lc-jump-fwd:after {
+    font-size: 11px;
+}
+
+.lc-sc-aspect-ratio .lc-video-controls .lc-center-controls .lc-jump-back:after {
+    padding-left: 4px;
+}
+
+.lc-sc-aspect-ratio .lc-video-controls .lc-center-controls .lc-jump-back:after {
+    padding-right: 1px;
+}
+
+.lc-sc-aspect-ratio .lc-video-controls .lc-center-controls .lc-play svg {
+    transform: translateX(3px);
+}
+
+.lc-sc-aspect-ratio .lc-pause {
+    display: none;
+}
+
+.lc-sc-aspect-ratio .lc-video-controls:hover {
+    opacity: 1;
+}
+
+.lc-sc-video-thumb-wrapper[data-playing="true"] .lc-center-controls .lc-play {
+    display: none;
+}
+
+.lc-sc-video-thumb-wrapper[data-playing="true"] .lc-center-controls .lc-pause {
+    display: block;
+}
+
+.lc-sc-video-thumb-wrapper .lc-sc-excerpt {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-height: 85px;
+    overflow: hidden;
+    font-size: 14px;
+    position: relative;
+}
+
+.lc-sc-video-thumb-wrapper .lc-sc-excerpt:after {
+    display: block;
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 83%, white 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(83%, white), to(white));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 83%, white 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 83%, white 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+
+.lc-sc-video-thumb-wrapper .wp-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.lc-sc-video-thumb-wrapper .lc-sc-article-video-wrapper {
+    display: none;
+}
+
+.lc-sc-article-video-wrapper {
+    position: relative;
+    min-height: 100%;
+    margin-bottom: 15px;
+    max-width: 640px;
+    background: yellow;
+}
+
+.lc-sc-article-video-wrapper .wp-video,
+.lc-sc-article-video-wrapper .mejs-container,
+.lc-sc-video-thumb-wrapper .wp-video,
+.lc-sc-video-thumb-wrapper .mejs-container {
+	height: 100% !important;
+	width: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.lc-sc-article-video-wrapper .wp-video-shortcode video,
+.lc-sc-article-video-wrapper video.wp-video-shortcode,
+.lc-sc-video-thumb-wrapper .wp-video-shortcode video,
+.lc-sc-video-thumb-wrapper video.wp-video-shortcode {
+    height: 100% !important;
+}
+
+.entry-content {
+	width: 100% !important;
+}
+
+.lc-sc-show-all-button {
+    margin-bottom: 30px;
+    float: right;
+}
+
+.lc-sc-pagination > * {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.lc-sc-pagination .lc-sc-pagination-num {
+    flex-grow: 2;
+}
+.lc-sc-pagination {
+    display: flex;
+    justify-content: space-between;
+}
